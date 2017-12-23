@@ -1,0 +1,22 @@
+type Query {
+    # Find story by id
+    story(id: String!): UserStory
+    # Return all stories
+    stories: [UserStory]
+}
+
+# A User Story
+type UserStory {
+    # The id of the human
+    id: Int!
+    # The name of the human
+    title: String!
+    # User Story description
+    description: String
+    # The friends of the human, or an empty list if they have none
+    relatedTo: [UserStory]
+    # The id of the assignee
+    employeeId: Int!
+    # The id of the releated project
+    projectId: Int!
+}
