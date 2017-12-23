@@ -1,6 +1,6 @@
 type Query {
     # Find story by id
-    story(id: String!): UserStory
+    story(id: Int!): UserStory
     # Return all stories
     stories: [UserStory]
 }
@@ -13,10 +13,10 @@ type UserStory {
     title: String!
     # User Story description
     description: String
-    # The friends of the human, or an empty list if they have none
-    relatedTo: [UserStory]
+    # The stories related to this story, or nothing if there aren't any
+    relatedStories: [UserStory]
     # The id of the assignee
     employeeId: Int!
-    # The id of the releated project
+    # The id of the related project
     projectId: Int!
 }
