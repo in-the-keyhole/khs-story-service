@@ -2,7 +2,7 @@ type Query {
     # Find story by id
     story(id: Int!): UserStory
     # Return all stories
-    stories: [UserStory]
+    stories(projectId: Int, employeeId: Int): [UserStory]
 }
 
 # A User Story

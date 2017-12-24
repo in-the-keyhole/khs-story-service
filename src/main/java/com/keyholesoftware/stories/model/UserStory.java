@@ -11,8 +11,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
 @Entity
 @Table(name = "story")
 public class UserStory {
@@ -88,7 +86,6 @@ public class UserStory {
 		this.relatedStories = relatedStories;
 	}
 
-	@NotEmpty
 	private String title;
 
 	private String description;
